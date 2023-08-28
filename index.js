@@ -8,12 +8,15 @@
 // if lower append it to upper characte, check mass
 // else if upper get atomic mass of the previous upper
 // if char is a number, parse it and * by atomic mass of prev element
-let userInput = document.getElementById('userInput');
-let calculateBtn = document.getElementById('calculateBtn');
-let molarMass = document.getElementById('molarMass');
+let userInput = document.getElementById("userInput");
+let calculateBtn = document.getElementById("calculateBtn");
+let molarMass = document.getElementById("molarMass");
 
-calculateBtn.addEventListener('click', calculateMolarMass)
-
+calculateBtn.addEventListener("click", () => {
+    const compound = userInput.value;
+    const result = calculateMolarMass(compound);
+    molarMass.textContent = result;
+});
 let atomicMasses = {
   H: 1.00794,
   He: 4.002602,
