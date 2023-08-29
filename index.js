@@ -15,8 +15,9 @@ let molarMass = document.getElementById("molarMass");
 calculateBtn.addEventListener("click", () => {
     const compound = userInput.value;
     const result = calculateMolarMass(compound);
-    molarMass.textContent = result;
+    molarMass.textContent = result + " g/mol";
 });
+
 let atomicMasses = {
   H: 1.00794,
   He: 4.002602,
@@ -94,7 +95,7 @@ let atomicMasses = {
   Ir: 192.22,
   Pt: 195.09,
   Au: 196.9665,
-  Mercury: 200.59,
+  Hg: 200.59,
   Tl: 204.37,
   Pb: 207.2,
   Bi: 208.9804,
